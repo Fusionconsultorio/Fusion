@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fusión Consultorio | Bienestar Integral</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --blanco: #ffffff;
+            --rosa-pastel: #fce4ec;
+            --dorado: #c5a059;
+            --gris-claro: #f4f4f4;
+            --texto: #4a4a4a;
+            --rosa-acento: #f06292;
+            --nudo: #e1f5fe;
+            --beige-clarito: #fdfaf5;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--texto);
+            line-height: 1.6;
+            background-color: var(--beige-clarito);
+        }
+
+        nav {
+            padding: 20px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(255, 255, 255, 0.9);
+            border-bottom: 1px solid var(--gris-claro);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-links { list-style: none; display: flex; gap: 20px; }
+        .nav-links a { text-decoration: none; color: var(--texto); font-size: 0.85rem; font-weight: 600; }
+
+        header.hero {
+            height: 60vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background: linear-gradient(rgba(253, 250, 245, 0.7), rgba(253, 250, 245, 0.7)),
+                        url('https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=1920');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .hero h1 { font-family: 'Playfair Display', serif; font-size: 3rem; color: var(--texto); }
+
+        section { padding: 60px 10%; }
+        .section-title { text-align: center; font-family: 'Playfair Display', serif; font-size: 2.2rem; margin-bottom: 40px; }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .service-card {
+            background: var(--blanco);
+            padding: 30px;
+            border-radius: 12px;
+            border: 1px solid var(--rosa-pastel);
+            transition: 0.3s;
+        }
+
+        .service-card:hover { transform: translateY(-5px); box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
+        .service-card h3 { color: var(--dorado); margin-bottom: 15px; border-bottom: 1px solid var(--rosa-pastel); padding-bottom: 10px; }
+        .service-card ul { list-style: none; font-size: 0.9rem; }
+        .service-card li { margin-bottom: 8px; }
+
+        .nudo-section {
+            background-color: var(--nudo);
+            border-radius: 20px;
+            padding: 40px;
+            text-align: center;
+            margin: 40px 0;
+        }
+
+        .badge {
+            background-color: var(--dorado);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            font-weight: 600;
+        }
+
+        .map-container {
+            width: 100%;
+            max-width: 900px;
+            margin: 30px auto;
+            border-radius: 15px;
+            overflow: hidden;
+            border: 2px solid var(--rosa-pastel);
+        }
+
+        .turno-box {
+            background: var(--blanco);
+            border: 1px dashed var(--rosa-acento);
+            padding: 25px;
+            text-align: center;
+            border-radius: 12px;
+            margin-top: 40px;
+        }
+
+        .cta-button {
+            padding: 15px 35px;
+            background-color: var(--rosa-pastel);
+            color: var(--texto);
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            display: inline-block;
+            margin-top: 20px;
+        }
+
+        footer {
+            background-color: var(--gris-claro);
+            padding: 50px 10%;
+            text-align: center;
+        }
+
+        .social-link { text-decoration: none; color: var(--texto); font-weight: 600; display: block; margin-top: 15px; }
+
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            section { padding: 40px 5%; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div style="font-weight: 600; font-size: 1.4rem; color: var(--dorado);">FUSIÓN</div>
+        <ul class="nav-links">
+            <li><a href="#servicios">Servicios</a></li>
+            <li><a href="#proximamente">Próximamente</a></li>
+            <li><a href="#turnos">Turnos</a></li>
+        </ul>
+    </nav>
+
+    <header class="hero">
+        <div>
+            <h1>Fusión Consultorio</h1>
+            <p>Salud integral y aprendizaje en un entorno de calma y profesionalismo.</p>
+        </div>
+    </header>
+
+    <section id="servicios">
+        <h2 class="section-title">Nuestras Especialidades</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <h3>Psicología</h3>
+                <ul>
+                    <li>• Atención a niños, adolescentes y adultos.</li>
+                    <li>• Modalidad: Presencial y Online.</li>
+                    <li>• Orientación Vocacional.</li>
+                    <li>• Psicotécnicos.</li>
+                    <li>• Evaluación para Licencia de Conducir.</li>
+                </ul>
+            </div>
+            <div class="service-card">
+                <h3>Fonoaudiología</h3>
+                <ul>
+                    <li>• Especialistas en lenguaje y comunicación.</li>
+                    <li>• <em style="color: #c62828;">Aclaración: No se trabaja con discapacidad.</em></li>
+                </ul>
+            </div>
+            <div class="service-card">
+                <h3>Clases de Inglés</h3>
+                <ul>
+                    <li>• Clases particulares: Primario y Secundario.</li>
+                    <li>• Modalidad: Presencial y Virtual.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="proximamente">
+        <div class="nudo-section">
+            <span class="badge">Próximamente</span>
+            <h2 style="font-family: 'Playfair Display', serif; margin: 15px 0;">Espacio Nudo</h2>
+            <p style="max-width: 700px; margin: 0 auto 20px;">Un taller diseñado para el desarrollo de la <strong>inteligencia emocional</strong> y el fortalecimiento de las <strong>habilidades sociales</strong>.</p>
+            <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
+                <p><strong>Viernes (Virtual):</strong><br> 19:00 a 20:30 hs</p>
+                <p><strong>Sábados (Presencial):</strong><br> 14:00 a 15:30 hs</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="turnos" style="text-align: center;">
+        <h2 class="section-title">Información de Turnos</h2>
+        
+        <div class="map-container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3277.84306197824!2d-58.209220524934786!3d-34.759545965743406!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a32f5005c826cf%3A0xd94f25ed7190b418!2sFusion%20Consultorio!5e0!3m2!1ses!2sar!4v1714600000000!5m2!1ses!2sar" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+
+        <div class="turno-box">
+            <p>Para asegurar tu lugar en la agenda, solicitamos una <strong>seña previa de $12.000 ARS</strong>.</p>
+        </div>
+        <a href="https://wa.me/5491154914617" class="cta-button">Reservar por WhatsApp</a>
+    </section>
+
+    <footer>
+        <div style="margin-bottom: 20px;">
+            <p><strong>Dirección:</strong> Calle 151 N° 1346, Berazategui</p>
+            <a href="https://maps.google.com/?q=Calle+151+1346+Berazategui" target="_blank" style="color: var(--dorado); font-size: 0.9rem; font-weight: bold; text-decoration: none;">Abrir en Google Maps</a>
+        </div>
+        <a href="https://instagram.com/fusion_consultorio" class="social-link">@fusion_consultorio</a>
+        <p style="font-size: 0.8rem; margin-top: 30px; opacity: 0.7;">© 2026 Fusión Consultorio. Un espacio para tu equilibrio y crecimiento.</p>
+    </footer>
+
+</body>
+</html>
